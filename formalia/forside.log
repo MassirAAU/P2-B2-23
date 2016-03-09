@@ -1,0 +1,277 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.15)  17 NOV 2015 19:11
+entering extended mode
+**forside.tex
+
+("C:\Users\Oskar Kromann Olsen\Google Drev\A408A\LATEX P1\Rapport\formalia\fors
+ide.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \begin{flushright}
+                      
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2--2
+[] 
+ []
+
+Missing character: There is no h in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no l in font nullfont!
+! Undefined control sequence.
+<recently read> \Huge 
+                      
+l.11 ...{\Huge Aalborg, en by i stadig forandring}
+                                                   \\ \vspace{1cm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (37.80566pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/m/sl/10 Aalborg,
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/m/sl/10 en
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/m/sl/10 by
+ []
+
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/m/sl/10 i
+ []
+
+
+Overfull \hbox (26.16673pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/m/sl/10 stadig
+ []
+
+
+Overfull \hbox (25.86118pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/m/sl/10 foran-
+ []
+
+
+Overfull \hbox (23.66211pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/m/sl/10 dring
+ []
+
+
+Overfull \hbox (369.88582pt too wide) in paragraph at lines 13--13
+ [][]
+ []
+
+! Undefined control sequence.
+l.16 \includegraphics
+                     [width=0.9\textwidth]{billeder/KMDgangbro.jpg}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.16 \includegraphics[width=0.9\textwidth]
+                                          {billeder/KMDgangbro.jpg}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.16 \includegraphics[width=0.9\textwidth]
+                                          {billeder/KMDgangbro.jpg}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no g in font nullfont!
+! Undefined control sequence.
+<recently read> \Large 
+                       
+l.23 Den 18. december 2015\\}
+                             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (12.9443pt too wide) in paragraph at lines 23--23
+ []\OT1/cmr/m/sc/10 P1
+ []
+
+
+Overfull \hbox (23.34982pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 Pro-
+ []
+
+
+Overfull \hbox (22.08878pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 jekt
+ []
+
+
+Overfull \hbox (37.18033pt too wide) in paragraph at lines 23--23
+ []\OT1/cmr/m/sc/10 Gruppe
+ []
+
+
+Overfull \hbox (30.8553pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 A408a
+ []
+
+Missing character: There is no Ã in font cmcsc10!
+Missing character: There is no ¦ in font cmcsc10!
+
+Overfull \hbox (41.28586pt too wide) in paragraph at lines 23--23
+ []\OT1/cmr/m/sc/10 Byggeri
+ []
+
+
+Overfull \hbox (8.44437pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 &
+ []
+
+
+Overfull \hbox (25.8165pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 Anlg
+ []
+
+
+Overfull \hbox (43.77199pt too wide) in paragraph at lines 23--23
+ []\OT1/cmr/m/sc/10 Aalborg
+ []
+
+
+Overfull \hbox (21.07207pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 Uni-
+ []
+
+
+Overfull \hbox (21.511pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 ver-
+ []
+
+
+Overfull \hbox (24.99985pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 sitet
+ []
+
+
+Overfull \hbox (20.00266pt too wide) in paragraph at lines 23--23
+ []\OT1/cmr/m/sc/10 Den
+ []
+
+
+Overfull \hbox (14.24985pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 18.
+ []
+
+
+Overfull \hbox (15.59991pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 de-
+ []
+
+
+Overfull \hbox (22.73318pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 cem-
+ []
+
+
+Overfull \hbox (17.39993pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 ber
+ []
+
+
+Overfull \hbox (22.1109pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/sc/10 2015
+ []
+
+)
+! Emergency stop.
+<*> forside.tex
+               
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 14 strings out of 493921
+ 362 string characters out of 3144833
+ 50031 words of memory out of 3000000
+ 3405 multiletter control sequences out of 15000+200000
+ 4294 words of font info for 16 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 13i,1n,10p,95b,125s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

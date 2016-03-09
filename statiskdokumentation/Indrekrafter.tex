@@ -1,0 +1,295 @@
+\section{Beregning af indre kræfter}
+I dette afsnit vil gitterkonstruktionens indre kræfter blive beregning. Til disse udregninger vil knudepunktsmetoden blive anvendt gennem hele konstruktionen. De indre kræfter er de ydre kræfter overført til konstruktionens profiler og ud fra beregningerne af de indre kræfter kan man se, hvilke profiler der bliver træk- og trykpåvirket. 
+
+Til  udregning, af de indre kræfter, med anvendelse af knudepunktsmetoden, anvendes punktlasterne fra lastkombinationen, som tidligere udregnet i afsnit \ref{Lastkombinationer}, hvor den størst belastet lastkombination er valgt. Udover punktlasterne skal reaktionerne fra afsnit \ref{kap:Reaktion} anvendes til udregning af de indre kræfter.
+
+Stængerne med de indre kræfter er navngivet på den måde, at stangen mellem knudepunkt 1 og knudepunkt 13 har navnet $S_{1.13}$, og stangen mellem knudepunkt 1 og knudepunkt 14 har navnet $S_{1.14}$ osv. Alle stangnavnene er vist på Figur \ref{fig:Stangnavnverti} for det vertikale gitter i læsiden og på Figur \ref{fig:Stangnavnhori} ses stangnavnene for det øvre horisontale gitter.
+\begin{figure}[htbp] \centering
+\includegraphics[width=1.00\textwidth]{billeder/Stangnavnverti} 
+\caption{Billede fra stangnavne for det vertikale gitter på læsiden.}
+\label{fig:Stangnavnverti}
+\end{figure}
+
+\begin{figure}[htbp] \centering
+\includegraphics[width=1.0\textwidth]{billeder/Stangnavnhori} 
+\caption{Stangnavne for det øvre horisontale gitter.}
+\label{fig:Stangnavnhori}
+\end{figure}
+
+\textbf{Knudepunktsmetoden:}
+
+Knudepunktsmetoden er en metode, der anvendes til at beregne stangkræfter for en gitterkonstruktion. Den anvendes til en statisk bestemt konstruktion, og som fortalt tidligere er gangbroen ubestemt og derfor bliver der indsat en fiktiv stang, som kan ses på Figur \ref{fig:Vertikalgitterfiktiv}. For at udføre beregninger af stangkræfterne, løsskæres hvert knudepunkt for sig selv og der anvendes to ligevægtsligninger:
+\begin{align*}
+\sum F_{y} = 0 \\ \sum F_{x} = 0
+\end{align*}
+Disse to ligevægtsligninger betyder, at summen af kræfter i henholdsvis vertikal og horisontal retning, skal være lig med nul. I nogle af knudepunkterne er der også diagonale stænger, hvor stangkræfterne bliver opløst i horisontale og vertikale kræfter, som kaldes x- og y-komposanter, der kan benyttes i ligevægtsligningerne.
+
+For at benytte denne metode kræves det, at der i hvert løsskåret knudepunkt kun er én ubekendt kraft i henholdsvis vertikal og horisontal retning. Inden beregningerne påbegyndes, antages der en positiv og negativ retning, for både den horisontale og vertikale retning, disse retninger ses på Figur \ref{fig:Retning}. Stangkræfterne ved et knudepunkt er rettet væk fra knudepunktet det betyder, at hvis beregninger giver et positivt resultat, er det en trækstang og giver resultatet et negativt resultat vil det være en trykstang.
+\begin{figure}[H] \centering
+\includegraphics[width=0.20\textwidth]{billeder/Retning} 
+\caption{Billede fra Positive og negative retninger for horisontal og vertikal retning.}
+\label{fig:Retning}
+\end{figure}
+
+I det følgende afsnit udregnes de indre kræfter for profilerne i læsiden, som er imellem knudepunkt 13, 1, 14 og 2. Denne rækkefølge er valgt, da der i knudepunkt 13 kun er én ubekendt kraft, da det er det eneste knudepunkt med en ubekendt kraft. 
+
+Beregning af indrekræfter i knudepunkt 13:
+\begin{figure}[H] \centering
+\includegraphics[width=0.20\textwidth]{billeder/Krafterknudepunkt13} \caption{Knudepunkt 13 med påvirkende kræfter.}
+\end{figure}
+
+Vertikal projektering:
+\begin{align*}
+& \sum F_{y} = 0 \\&
+0 = R_{AV} + S_{1.13} - P_{1} \\&
+0 = \SI{728,95}{kN} + S_{1.13} - \SI{49,67}{kN} \\&
+S_{1.13} = \SI{-679,27}{kN}
+\end{align*}
+Da resultatet for $S_{1.13}$ er negativ betyder det, at det er en trykstang.
+
+Hortisontal projektering:
+\begin{align*}
+& \sum F_{x} = 0 \\
+& 0 = R_{AH} + S_{13.14} \\
+& S_{13.14} = - R_{AH} \\
+& S_{13.14} = \SI{0}{kN}
+\end{align*}
+Da resultatet for $S_{13.14}$ er nul er der ingen indrekræfter.
+
+Beregning af indrekræfter i knudepunkt 1: 
+\begin{figure}[H] \centering
+\includegraphics[width=0.15\textwidth]{billeder/Krafterknudepunkt1}
+\caption{Knudepunkt 1 med påvirkende kræfter.}
+\end{figure}
+Vertikal projektering:
+\begin{align*}
+& \sum F_{y} = 0 \\
+& 0 = - P_{1} - S_{1.13} - S_{1.14} \cdot sin(66,8^ {\circ}) \\
+& - S_{1.14} = \dfrac{P_{1}  + S_{1.13}}{sin(66,8^ {\circ}) } \\
+& - S_{1.14} = \dfrac{-20,89 + (-679,27)}{sin(66,8^ {\circ}) } \\
+& S_{1.14} = 716,31 \\
+\end{align*}
+Da resultatet for $S_{1.14}$ er positiv betyder det, at det er en trækstang.
+
+Hortisontal projektering:
+\begin{align*}
+& \sum F_{x} = 0 \\
+& 0 = S_{1.2} +  S_{1.14} \cdot cos(66,8^ {\circ}) \\
+& S_{1.2} = - S_{1.14} \cdot cos(66,8^ {\circ}) \\
+& S_{1.2} = - 716,31 \cdot cos(66,8^ {\circ}) \\
+& S_{1.2} = -282,18
+\end{align*}
+Da resultatet for $S_{1.2}$  er negativt er det en trykstang.
+\newpage
+Beregning af indrekræfter i knudepunkt 14:
+\begin{figure}[H] \centering
+\includegraphics[width=0.30\textwidth]{billeder/Krafterknudepunkt14} \caption{Knudepunkt 14 med påvirkende kræfter.}
+\end{figure}
+
+Vertikal projektering:
+\begin{align*}
+& \sum F_{y} = 0 \\
+& 0 = S_{2.14} + S_{1.14} - P_{14} \\
+& S_{2.14} = P_{14} - S_{1.14}\\
+& S_{2.14} = 98,67 - 716,31\\
+& S_{2.14} =  -559,71 \\
+\end{align*}
+Da resultatet for $S_{2.14}$ er negativ, betyder det, at det er en trykstang.
+
+Hortisontal projektering:
+\begin{align*}
+& \sum F_{x} = 0 \\
+& 0 = S_{14.15} - S_{13.14} - S_{1.14} \cdot cos(66,8^ {\circ})  \\
+& S_{14.15} = S_{13.14} + S_{1.14} \cdot cos(66,8^ {\circ})  \\
+& S_{14.15} = 0 + 716,31 \cdot cos(66,8^ {\circ})  \\
+& S_{14.15} = 282,18 \\
+\end{align*}
+Da resultatet for $S_{13.14}$ er 0 er der ingen indrekræfter.
+
+Beregning af indrekræfter i knudepunkt 2:
+
+Vertikal projektering:
+\begin{align*}
+& \sum F_{y} = 0 \\
+& 0 = - P_{2} - S_{2.14} - S_{2.15} \cdot sin(66,8^ {\circ}) \\
+& - S_{2.15} = \dfrac{P_{2}  + S_{2.14}}{sin(66,8^ {\circ}) } \\
+& - S_{2.15} = \dfrac{ 38,26 + (-559,71)}{sin(66,8^ {\circ}) } \\
+& S_{2.15} = 567,33 \\
+\end{align*}
+Da resultatet for $S_{2.15}$ er postitiv betyder det, at det er en trækstang.
+
+Hortisontal projektering:
+\begin{align*}
+& \sum F_{x} = 0 \\
+& 0 = S_{2.3} +  S{2.15} \cdot cos(66,8^ {\circ}) - S_{1.2} \\
+& S_{2.3} = S_{1.2} - S{2.15} \cdot cos(66,8^ {\circ})\\
+& S_{2.3} = -282,18  - 567,33 \cdot cos(66,8^ {\circ})\\
+& S_{2.3} = -505,68
+\end{align*}
+Da resultatet for $S_{2.3}$ er negativ, betyder det, at det er en trykstang.
+\begin{figure}[H] \centering
+\includegraphics[width=0.25\textwidth]{billeder/Krafterknudepunkt2} \caption{Knudepunkt 2 med påvirkende kræfter.}
+\end{figure}
+
+Figur \ref{fig:indrekrafterfacade} og \ref{fig:indrekrafterfugle} illustrerer hvilke stænger der er træk eller  tryk, og hvilke stænger der ingen stangkræfter er i.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{billeder/Trykogtrekstengerfacade}
+\caption{Illustration over træk- og trykstænger set fra oven. Rød er trækstrænger og blå er trykstænger. Den sorte stang unden stangkræfter.}
+\label{fig:indrekrafterfacade}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{billeder/Trykogtrekstengerfugle}
+\caption{Illustration over træk- og trykstænger set fra oven. Rød er trækstrænger og blå er trykstænger. De sorte er stænger unden stangkræfter.}
+\label{fig:indrekrafterfugle}
+\end{figure}
+
+Efterfølgende er resultaterne for alle stangkræfter vist i Tabel \ref{tab:Indrekrafterle}, Tabel \ref{tab:Indrekrafterluv} og Tabel \ref{tab:Indrekrafterovre} og beregninger for de indre kræfter i de to vertikale gittere samt det øvre horisontale gitter ses i Appendiks \ref{App:Indrekrafterle}.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|l|l|c|}
+\hline
+\textbf{Knudepunkter}     & \textbf{Komposant} & \textbf{Stang$_{\textbf{nr}}$} & \textbf{Resultat [kN]} \\ \hline
+\multirow{2}{*}{$k_{13}$} & y                  & $S_{1.13}$            & -679,27           \\ \cline{2-4} 
+                          & x                  & $S_{13.14}$           & 0                 \\ \hline
+\multirow{2}{*}{$k_1$}    & y                  & $S_{1.14}$            & 716,31          \\ \cline{2-4} 
+                          & x                  & $S_{1.2}$             & -282,18           \\ \hline
+\multirow{2}{*}{$k_{14}$} & y                  & $S_{2.14}$            & -559,71           \\ \cline{2-4} 
+                          & x                  & $S_{14.15}$           & 282,18           \\ \hline
+\multirow{2}{*}{$k_{2}$}  & y                  & $S_{2.15}$            & 567,33            \\ \cline{2-4} 
+                          & x                  & $S_{2.3}$             & -505,68           \\ \hline
+\multirow{2}{*}{$k_{15}$} & y                  & $S_{3.15}$            & -425,1           \\ \cline{2-4} 
+                          & x                  & $S_{15.16}$           & 505,68            \\ \hline
+\multirow{2}{*}{$k_{3}$}  & y                  & $S_{3.16}$            & 424,09               \\ \cline{2-4} 
+                          & x                  & $S_{3.4}$             & -672,75          \\ \hline
+\multirow{2}{*}{$k_{16}$} & y                  & $S_{4.16}$            & -291,12           \\ \cline{2-4} 
+                          & x                  & $S_{16.17}$           & 672,75          \\ \hline
+\multirow{2}{*}{$k_{4}$}  & y                  & $S_{4.17}$            & 278,95            \\ \cline{2-4} 
+                          & x                  & $S_{4.5}$             & -782,64         \\ \hline
+\multirow{2}{*}{$k_{17}$} & y                  & $S_{5.17}$            & -160,04           \\ \cline{2-4} 
+                          & x                  & $S_{17.18}$           & 782,64          \\ \hline
+\multirow{2}{*}{$k_{5}$}  & y                  & $S_{5.18}$            & 139,33            \\ \cline{2-4} 
+                          & x                  & $S_{5.6}$             & -837,52         \\ \hline
+\multirow{2}{*}{$k_{6}$}  & y                  & $S_{6.18}$            & -32,29               \\ \cline{2-4} 
+                          & x                  & $S_{6.7}$             & -837,52         \\ \hline
+\multirow{2}{*}{$k_{18}$} & y                  & $S_{7.18}$            & 3,15              \\ \cline{2-4} 
+                          & x                  & $S_{18.19}$           & 836,28          \\ \hline
+\multirow{2}{*}{$k_{7}$}  & y                  & $S_{7.19}$            & -34           \\ \cline{2-4} 
+                          & x                  & $S_{7.8}$             & -836,28          \\ \hline
+\multirow{2}{*}{$k_{19}$} & y                  & $S_{8.19}$            & 141,81            \\ \cline{2-4} 
+                          & x                  & $S_{19.20}$           & 780,42       \\ \hline
+\multirow{2}{*}{$k_{8}$}  & y                  & $S_{8.20}$            & -163,03          \\ \cline{2-4} 
+                          & x                  & $S_{8.9}$             & -780,42        \\ \hline
+\multirow{2}{*}{$k_{20}$} & y                  & $S_{9.20}$            & 284,72            \\ \cline{2-4} 
+                          & x                  & $S_{20.21}$           & 668,25            \\ \hline
+\multirow{2}{*}{$k_{9}$}  & y                  & $S_{9.21}$            & -293,19           \\ \cline{2-4} 
+                          & x                  & $S_{9.10}$            & -668,25           \\ \hline
+\multirow{2}{*}{$k_{21}$} & y                  & $S_{10.21}$           & 423,81           \\ \cline{2-4} 
+                          & x                  & $S_{21.22}$           & 501,3          \\ \hline
+\multirow{2}{*}{$k_{10}$} & y                  & $S_{10.22}$           & -422,22           \\ \cline{2-4} 
+                          & x                  & $S_{10.11}$           & -501,3       \\ \hline
+\multirow{2}{*}{$k_{22}$} & y                  & $S_{11.22}$           & 566,71            \\ \cline{2-4} 
+                          & x                  & $S_{22.23}$           & 278,04         \\ \hline
+\multirow{2}{*}{$k_{11}$} & y                  & $S_{11.23}$           & -552,38           \\ \cline{2-4} 
+                          & x                  & $S_{11.12}$           & -278,04          \\ \hline
+\multirow{2}{*}{$k_{23}$} & y                  & $S_{12.23}$           & 705,8           \\ \cline{2-4} 
+                          & x                  & $S_{23.24}$           & 0                 \\ \hline
+\multirow{2}{*}{$k_{12}$} & y                  & $S_{12.24}$           & -666,76           \\ \cline{2-4} 
+                          &                    &                       &                   \\ \hline
+\end{tabular}
+\caption{Resultat for indrekræfter i stængerne i det vertikale gitter for læsiden}
+\label{tab:Indrekrafterle}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|l|l|c|}
+\hline
+\textbf{Knudepunkter}     & \textbf{Komposant} & \textbf{Stang$_{\textbf{nr}}$} & \textbf{Resultat [kN]} \\ \hline
+\multirow{2}{*}{$kl_{13}$} & y                  & $S_{1.13}$            & -709,82           \\ \cline{2-4} 
+                          & x                  & $S_{13.14}$           & 0                 \\ \hline
+\multirow{2}{*}{$kl_1$}    & y                  & $S_{1.14}$            & 746,22          \\ \cline{2-4} 
+                          & x                  & $S_{1.2}$             & -293,97           \\ \hline
+\multirow{2}{*}{$kl_{14}$} & y                  & $S_{2.14}$            & -583,28           \\ \cline{2-4} 
+                          & x                  & $S_{14.15}$           & 293,97           \\ \hline
+\multirow{2}{*}{$kl_{2}$}  & y                  & $S_{2.15}$            & 587,99            \\ \cline{2-4} 
+                          & x                  & $S_{2.3}$             & -525,6           \\ \hline
+\multirow{2}{*}{$kl_{15}$} & y                  & $S_{3.15}$            & -441,91           \\ \cline{2-4} 
+                          & x                  & $S_{15.16}$           & 525,6            \\ \hline
+\multirow{2}{*}{$kl_{3}$}  & y                  & $S_{3.16}$            & 439,58            \\ \cline{2-4} 
+                          & x                  & $S_{3.4}$             & -698,77         \\ \hline
+\multirow{2}{*}{$kl_{16}$} & y                  & $S_{4.16}$            & -303,18           \\ \cline{2-4} 
+                          & x                  & $S_{16.17}$           & 698,77           \\ \hline
+\multirow{2}{*}{$kl_{4}$}  & y                  & $S_{4.17}$            & 289,28            \\ \cline{2-4} 
+                          & x                  & $S_{4.5}$             & -812,73          \\ \hline
+\multirow{2}{*}{$kl_{17}$} & y                  & $S_{5.17}$            & -167,35          \\ \cline{2-4} 
+                          & x                  & $S_{17.18}$           & 812,73           \\ \hline
+\multirow{2}{*}{$kl_{5}$}  & y                  & $S_{5.18}$            & 144,6             \\ \cline{2-4} 
+                          & x                  & $S_{5.6}$             & -869,69          \\ \hline
+\multirow{2}{*}{$kl_{6}$}  & y                  & $S_{6.18}$            & -34,86            \\ \cline{2-4} 
+                          & x                  & $S_{6.7}$             & -869,69          \\ \hline
+\multirow{2}{*}{$kl_{18}$} & y                  & $S_{7.18}$            & 3,05              \\ \cline{2-4} 
+                          & x                  & $S_{18.19}$           & 868,49           \\ \hline
+\multirow{2}{*}{$kl_{7}$}  & y                  & $S_{7.19}$            & -36,48            \\ \cline{2-4} 
+                          & x                  & $S_{7.8}$             & -868,49         \\ \hline
+\multirow{2}{*}{$kl_{19}$} & y                  & $S_{8.19}$            & 146,95             \\ \cline{2-4} 
+                          & x                  & $S_{19.20}$           & 810,6           \\ \hline
+\multirow{2}{*}{$kl_{8}$}  & y                  & $S_{8.20}$            & -170,33           \\ \cline{2-4} 
+                          & x                  & $S_{8.9}$             & -810,6         \\ \hline
+\multirow{2}{*}{$kl_{20}$} & y                  & $S_{9.20}$            & 294,04            \\ \cline{2-4} 
+                          & x                  & $S_{20.21}$           & 694,37            \\ \hline
+\multirow{2}{*}{$kl_{9}$}  & y                  & $S_{9.21}$            & -305,25           \\ \cline{2-4} 
+                          & x                  & $S_{9.10}$            & -694,37         \\ \hline
+\multirow{2}{*}{$kl_{21}$} & y                  & $S_{10.21}$           & 439,37            \\ \cline{2-4} 
+                          & x                  & $S_{21.22}$           & 521,28          \\ \hline
+\multirow{2}{*}{$kl_{10}$} & y                  & $S_{10.22}$           & -439,1           \\ \cline{2-4} 
+                          & x                  & $S_{10.11}$           & -521,28           \\ \hline
+\multirow{2}{*}{$kl_{22}$} & y                  & $S_{11.22}$           & 587,45            \\ \cline{2-4} 
+                          & x                  & $S_{22.23}$           & 289,86             \\ \hline
+\multirow{2}{*}{$kl_{11}$} & y                  & $S_{11.23}$           & -576,03           \\ \cline{2-4} 
+                          & x                  & $S_{11.12}$           & -289,86            \\ \hline
+\multirow{2}{*}{$kl_{23}$} & y                  & $S_{12.23}$           & 735,8           \\ \cline{2-4} 
+                          & x                  & $S_{23.24}$           & 0                 \\ \hline
+\multirow{2}{*}{$kl_{12}$} & y                  & $S_{12.24}$           & -697,39           \\ \cline{2-4} 
+                          &                    &                       &                   \\ \hline
+\end{tabular}
+\caption{Resultat for indrekræfter i stængerne i det vertikale gitter for luvsiden}
+\label{tab:Indrekrafterluv}
+\end{table}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{\begin{tabular}{|c|l|l|c|c|l|l|c|}
+\hline
+\textbf{Knudepunkt}     & \multicolumn{1}{c|}{\textbf{K}} & \textbf{Stang$_{\textbf{nr}}$} & \textbf{Resultat{[}kN{]}} & \textbf{Knudepunkt}        & \textbf{K} & \textbf{Stang$_{\textbf{nr}}$} & \textbf{Resultat{[}kN{]}} \\ \hline
+\multirow{2}{*}{$k_1$}  & \multicolumn{1}{c|}{y}          & $S_{L1.1}$            & -142,33                   & \multirow{2}{*}{$k_7$}     & y          & $S_{L7.7}$            & 11,2                      \\ \cline{2-4} \cline{6-8} 
+                        & \multicolumn{1}{c|}{x}          & $S_{1.2}$             & 0                         &                            & x          & $S_{7.8}$             & 423,34                    \\ \hline
+\multirow{2}{*}{$kl_1$} & \multicolumn{1}{c|}{y}          & $S_{L1.2}$            & 194,86                    & \multirow{2}{*}{$kl_7$}    & y          & $S_{L7.8}$            & -38,89                    \\ \cline{2-4} \cline{6-8} 
+                        & \multicolumn{1}{c|}{x}          & $S_{L1.L2}$           & -141,02                   &                            & x          & $S_{L7.L8}$           & -141,02                   \\ \hline
+\multirow{2}{*}{$kl_2$} & \multicolumn{1}{c|}{y}          & $S_{L2.2}$            & -15,69                    & \multirow{2}{*}{$kl_8$}    & y          & $S_{L8.8}$            & -15,69                    \\ \cline{2-4} \cline{6-8} 
+                        & \multicolumn{1}{c|}{x}          & $S_{L2.L3}$           & -141,02                   &                            & x          & $S_{L8.L9}$           & -141,02                   \\ \hline
+\multirow{2}{*}{$k_2$}  & \multicolumn{1}{c|}{y}          & $S_{2.L3}$            & -155,89                   & \multirow{2}{*}{$k_8$}     & y          & $S_{8.L9}$            & 77,86                     \\ \cline{2-4} \cline{6-8} 
+                        & \multicolumn{1}{c|}{x}          & $S_{2.3}$             & 253,83                    &                            & x          & $S_{8.9}$             & 338,85                    \\ \hline
+\multirow{2}{*}{$k_3$}  & y                               & $S_{L3.3}$            & 11,2                      & \multirow{2}{*}{$k_9$}     & y          & $S_{L9.9}$            & 11,2                      \\ \cline{2-4} \cline{6-8} 
+                        & x                               & $S_{3.4}$             & 253,83                    &                            & x          & $S_{9.10}$            & 338,85                    \\ \hline
+\multirow{2}{*}{$kl_3$} & y                               & $S_{L3.4}$            & 117                       & \multirow{2}{*}{$kl_9$}    & y          & $S_{L9.10}$           & -116,91                   \\ \cline{2-4} \cline{6-8} 
+                        & x                               & $S_{L3.L4}$           & -141,02                   &                            & x          & $S_{L9.L10}$          & -141,02                   \\ \hline
+\multirow{2}{*}{$kl_4$} & y                               & $S_{L4.4}$            & -15,69                    & \multirow{2}{*}{$kl_{10}$} & y          & $S_{L10.10}$          & -15,69                    \\ \cline{2-4} \cline{6-8} 
+                        & x                               & $S_{L4.L5}$           & -141,02                   &                            & x          & $S_{L10.L11}$         & -141,02                   \\ \hline
+\multirow{2}{*}{$k_4$}  & y                               & $S_{4.L5}$            & -78,03                    & \multirow{2}{*}{$k_{10}$}  & y          & $S_{10.L11}$          & 155,86                    \\ \cline{2-4} \cline{6-8} 
+                        & x                               & $S_{4.5}$             & 394,97                    &                            & x          & $S_{10.11}$           & 141,43                    \\ \hline
+\multirow{2}{*}{$k_5$}  & y                               & $S_{L5.5}$            & 11,2                      & \multirow{2}{*}{$k_{11}$}  & y          & $S_{L11.11}$           & 11,2                      \\ \cline{2-4} \cline{6-8} 
+                        & x                               & $S_{5.6}$             & 394,97                    &                            & x          & $S_{11.12}$          & 141,43                    \\ \hline
+\multirow{2}{*}{$kl_5$} & y                               & $S_{L5.6}$            & 39,09                     & \multirow{2}{*}{$kl_{11}$} & y          & $S_{L11.12}$           & -195                      \\ \cline{2-4} \cline{6-8} 
+                        & x                               & $S_{L5.L6}$           & -141,02                   &                            & x          & $S_{L11.L12}$          & -141,02                   \\ \hline
+\multirow{2}{*}{$kl_6$} & y                               & $S_{L6.6}$            & -15,69                    & \multirow{2}{*}{$kl_{12}$} & y          & $S_{L12.12}$          & -7,85                     \\ \cline{2-4} \cline{6-8} 
+                        & x                               & $S_{L6.L7}$           & -141,02                   &                            & x          &                       &                           \\ \hline
+\multirow{2}{*}{$k_6$}  & y                               & $S_{6.L7}$            & -0,11                     & \multirow{2}{*}{}          &            &                       &                           \\ \cline{2-4} \cline{6-8} 
+                        & x                               & $S_{6.7}$             & 423,34                    &                            &            &                       &                           \\ \hline
+\end{tabular}}
+\caption{Resultat for indrekræfter i stængerne i det øvre horisontale gitter}
+\label{tab:Indrekrafterovre}
+\end{table}

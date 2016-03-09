@@ -1,0 +1,239 @@
+\section{Eftervisning af bæreevnen}
+I dette kapitel vil bærevenen af gitterkonstruktionens stålprofiler blive eftervist. For at bekræfte, at de valgte stålprofiler kan bære lasterne, vil der blive beregnet ud fra de største beregnede stangkræfter i det vertikale og horisontale gitter til hvert enkelte profil. Beviset på, at en stålprofil kan holde, vises ved, at stangkraften er mindre eller lig med den regningsmæssige værdi for stålprofilens bæreevne. De stangkræfter, som anvendes, er de største belastninger for træk- og trykprofilerne. For at bevise bæreevnen af gangbroen foretages der en udregning for en tryk- og trækstang. \citep{TekniskStobi}
+
+\subsection{Trykstænger}
+Profilens bæreevne, som skal eftervises, er stang nr. et. Følgende oplysninger om stålprofilen som anvendes til eftervisningen af bæreevnen ses i Tabel \ref{IPEprofil}, mens dens placering i det vertikale gitter kan ses på Figur \ref{fig:Tegning3frontprofiler}. De værdier, som anvendes og kendes for profilen, er: 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\multicolumn{3}{|c|}{IPE 360, S235}               \\ \hline
+ & Betegnelse & Aflæste værdi \\ \hline
+Flydespænding           &   $f_y$  &   $\SI{235}{MPa}$                         \\ \hline
+ Profilens tværsnitareal  & A  &  $\SI{7270}{mm^2}$                 \\ \hline
+ Inertiradius om y-aksen & i$_y$          & $\SI{150}{mm}$                          \\ \hline
+ Søjlens knæklængde      &  l$_s$  & $\SI{8400}{mm}$      \\ \hline
+  Stangkraft     &  S$_{kraft}$ (S$_{1.13}$)  & $\SI{709,82}{kN}$    \\ \hline
+\end{tabular}
+\caption{Tabel over værdier omkring IPE 360, S235 som anvendes i eftervisning af den bæreevne. \citep{TekniskStobi}}
+\label{IPEprofil}
+\end{table}
+
+Det antages, at profilen bliver centralt påvirket, hvor der er to forskellige udtryk, som efterviser om en trykstangs bæreevne er tilstrækkelig i konstruktionen. Det rette udtryk vælges ud fra bestemmelsen af profilens tværsnitsklasse, hvor der er fra klasse et til fire. Tværsnitsklassen findes i en tabel i Teknisk Ståbi, \citep{TekniskStobi}, side 240. Profilens tværsnitsklasse er klasse 2, hvor følgende udtryk er for klasse 1, 2 og 3:
+\begin{align}
+ N_{Ed} \leq N_{b,Rd}
+ \label{lig:Bæreevne}
+\end{align}
+hvor: 
+\begin{itemize}
+\item $N_{Ed}$ = den regningsmæssige stangkrafts spænding, [MPa].
+\item $N_{b,Rd}$ = Profilens regningsmæssige bæreevne, [MPa].
+\end{itemize}
+De to udtryks værdier beregnes ud fra følgende formler:
+\begin{align*}
+ N_{Ed}= \frac{S_{kraft}}{A}
+\end{align*} 
+hvor:
+\begin{itemize}
+\item $S_{kraft}$ = den beregnede stangkraft, [kN].
+\item $A$ = tværsnitsarealet, [mm$^2$].
+\end{itemize}
+Værdierne indsættes og fås den regningsmæssige stangkrafts spænding til at være:
+\begin{align*}
+N_{Ed} = \frac{709,82 \SI{}{kN}}{7,27 \cdot 10^3 \SI{}{mm^2}} = 97,64 \SI{}{MPa}
+\end{align*}
+og denne formel:
+ \begin{align*}
+N_{b,Rd}  = \frac{\chi \cdot f_y  }{\gamma_{M1}}
+ \end{align*}
+hvor: 
+\begin{itemize}
+\item $\chi$ = søjlereduktionsfaktor [-]
+\item $f_y$ = flydespændingen for stålprofilet [MPa]
+\item $\gamma_{M1}$ = partialkoefficient [-]
+\end{itemize} 
+
+Søjlereduktionsfaktoren bestemmes ud fra en tabeloversigt hvor slankhedsforholdet og søjletilfældet er bestemt. Hertil bestemmes det, at udbøjningen af stålprofilen vil ske om y-aksen, hvor det kan ses på Figur \ref{fig:Profilyakse}. Slankhedsforholdet bestemmes ud fra:
+
+\begin{figure}[H] % (alternative [H])
+\centering
+\includegraphics[width=0.35\textwidth]{billeder/IProfil}
+\caption{Tværsnitsbillede af en i profil, vedrørende udbøjning omkring z- og y-aksen. }
+\label{fig:Profilyakse}
+\end{figure}
+\begin{align*}
+\lambda = \dfrac{\frac{l_s}{i_y}}{93,9 \cdot \varepsilon}
+\end{align*}
+ hvor: 
+ \begin{itemize}
+ \item $\lambda$ = slankhedsforholdet.
+ \item $l_s$ = søjlens knæklængde, [mm].
+ \item $i_y$ = inertiradius om y-aksen, [mm].
+ \item $\varepsilon$ = materialeparameter. 
+ \end{itemize}
+Materialemarameteren bestemmes ud fra følgende formel:
+\begin{align*}
+\varepsilon = \sqrt{\frac{235}{f_y}} = \sqrt{\frac{235}{235}} = 1
+\end{align*}
+
+Værdierne indsættes og slankhedsfaktoren fås til at være: 
+\begin{align*}
+\lambda =  \dfrac{\frac{8400 \SI{}{mm}}{150 \SI{}{mm}}}{93,9 \cdot 1} = 0,596
+\end{align*}
+I aflæsning af tabellen rundes slankhedsfaktoren op til 0,6.
+
+Søjletilfældets udbøjning bestemtes til at være om y-aksen, der ved bestemmes gyldighedsområdet til at være: 
+\begin{align*}
+{\frac{h}{b}} > 1,2
+\end{align*}
+\begin{align*}
+{\frac{360}{170}} = 2,12 > 1,2
+\end{align*}
+
+Udsagnet er sandt og derefter bestemmes det næste udsagn:
+\begin{align*}
+t_f \leq 40 mm
+\end{align*}
+hvor:
+\begin{itemize}
+\item $t_f$ = godstykkelsen for profilens flange, [mm].
+\end{itemize}
+\begin{align*}
+\SI{12,7}{mm} \leq \SI{40}{mm}
+\end{align*}
+
+
+Udsagnet er sandt og søjlereduktionsfaktoren bestemmes til at være i kategori a. Herefter aflæses søjlereduktionsfaktoren til at være:
+\begin{align*}
+\chi = 0,89
+\end{align*}
+
+Partialkoefficienten bestemmes i en tabeloversigt i Teknisk Ståbi, \citep{TekniskStobi}, side 198, hvor det er under emnet elementer og derunder søjler. 
+\begin{align*}
+\gamma_{M1} = 1,2 \cdot \gamma_3
+\end{align*}
+
+Bæreevnen bestemmes under normal kontrol og derfor er $\gamma_3$  givet til at være en værdi på en. Værdien indsættes og partialkoefficienten fås til:
+\begin{align*}
+\gamma_{M1} = 1,2 \cdot 1 = 1,2
+\end{align*}
+
+Herefter er alle værdier kendt til at bestemme profilens regningsmæssige bæreevne, værdierne indsættes og fås til at være:
+\begin{align*}
+N_{b,Rd}  = \frac{\chi \cdot f_y  }{\gamma_{M1}} = {\frac{0,89 \cdot 235 \SI{}{MPa}}{1,2}} = 174,29 \SI{}{MPa}
+\end{align*}
+
+Profilens regningsmæssige bæreevne og den regningsmæssige stangkraft i Ligning \ref{lig:Bæreevne}.
+\begin{align*}
+ \SI{174,29}{MPa} \geq \SI{97,64}{MPa}
+\end{align*}
+Efter som udagnet er sandt for stålprofilen IPE 360, S235 betyder det at bæreevnen er tilstrækkelig i forhold til den udsatte stangkraft.  
+ 
+
+\subsection{Trækstænger}
+Profilen, hvis bæreevne skal eftervises, er stang nr. to. Følgende oplysninger om stålprofilen, som anvendes til eftervisningen af bæreevnenm, ses i Tabel \ref{HEBprofil}, mens dens placering i det vertikale gitter kan ses på Figur \ref{fig:Tegning3frontprofiler}, hvor det er den profil som indgår i det nedre horisontale gitter. De værdier, som anvendes og kendes for profilen, er: 
+
+\begin{table}[H]
+\centering
+
+\begin{tabular}{|l|c|c|}
+\hline
+\multicolumn{3}{|c|}{HEB 300, S355}               \\ \hline
+ & Betegnelse & Aflæste værdi \\ \hline
+Flydespænding           &   $f_y$  &   $\SI{355}{MPa}$                         \\ \hline
+ Stangens tværsnitareal  & A  & $\SI{14900}{mm^2}$                 \\ \hline
+  Stangkraft     &  S$_{kraft}$ (S$_{18.19}$)  & $\SI{869,69}{kN}$    \\ \hline
+\end{tabular}
+\caption{Tabel over værdier omkring HEB 300, S355 som anvendes i eftervisning af den bæreevne. \citep{TekniskStobi}}
+\label{HEBprofil}
+\end{table}
+
+Tværsnitsklassen for stålprofilet er aflæst til klassifikation 1 i Teknisk Ståbi, \citep{TekniskStobi}, side 240. Der anvendes en formel, som tager udgangspunkt i tværsnittets bruttoværdi, som efterviser, at den påvirkende snitkraft ikke overstiger den angivne bæreevne til tværsnitsklassen en og to, som er aflæst ud fra Teknisk Ståbi, \citep{TekniskStobi}, side 241. 
+\begin{align}
+ N_{Ed} \leq N_{pl,Rd}
+ \label{lig:trak}
+\end{align}
+hvor: 
+\begin{itemize}
+\item $N_{Ed}$ = den regningsmæssige stangkrafts spænding, [MPa].
+\item $N_{pl,Rd}$ = Profilens regningsmæssige bæreevne, [MPa].
+\end{itemize}
+De to udtryks værdier beregnes ud fra følgende formler:
+\begin{align*}
+N_{Ed} = \frac{S_{kraft}}{A}
+\end{align*} 
+hvor:
+\begin{itemize}
+\item $S_{kraft}$ = den beregnede stangkraft, [kN].
+\item A = tværsnitsarealet, [mm$^2$].
+\end{itemize}
+Værdierne indsættes fra den regningsmæssige stangkrafts spænding til at være:
+\begin{align*}
+N_{Ed} = \frac{869,69 \SI{}{kN}}{14,9 \cdot 10^3 \SI{}{mm^2}} = 58,37 \SI{}{MPa}
+\end{align*}
+og denne formel:
+\begin{align*}
+N_{pl,Rd} = \frac{f_y}{\gamma_{M0}}
+\end{align*}
+hvor: 
+\begin{itemize}
+\item $f_y$ = flydespændingen for stålprofilet, [MPa].
+\item $\gamma_{M0}$ = partialkoefficient.
+\end{itemize} 
+Partialkoefficienten bestemmes i en tabeloversigt i Teknisk Ståbi, \citep{TekniskStobi}, side 198, hvor det er under tværsnit og derefter bruttotværsnit. 
+\begin{align*}
+\gamma_{M0} = 1,1 \cdot \gamma_3
+\end{align*}
+
+Bæreevnen bestemmes under normal kontrol og derfor er $\gamma_3$  givet til at være en værdi på en. Værdien indsættes og partialkoefficienten fås til:
+\begin{align*}
+\gamma_{M1} = 1,1 \cdot 1 = 1,1
+\end{align*}
+Profilens regningsmæssige bæreevne bestemmes og fås til at være:
+\begin{align*}
+N_{pl,Rd} = \frac{355 \SI{}{MPa}}{1,1} = 322,73 \SI{}{MPa}
+\end{align*}
+Profilens regningsmæssige bæreevne og den regningsmæssige stangkrafts spænding, indsættes i Ligningen \ref{lig:trak}.
+\begin{align*}
+ \SI{322,73}{MPa} \geq  \SI{58,37}{MPa}
+\end{align*}
+Eftersom udsagnet er sandt for stålprofilen HEB 300, S355 betyder det, at bæreevnen er tilstrækkelig i forhold til den udsatte stangkraft.  
+
+\subsection{Oversigt af bæreevnen}
+For de resterende trykstænger anvendes den samme beregningsmodel som på IPE 360, S235. Der er dog ændring vedrørende udbøjningen af profilerne. I Tabel \ref{tab:Resultryk} kan man se resultatet af eftervisningen af bæreevnen, af alle trykstænger i det vertikale og horisontale gitter. 
+
+I det horisontale gitter anvendes stang nr. fem, som er profil RHS 150 $ \cdot$ 6,3 S355. Denne profil kunne ikke findes i Teknisk Ståbi \citep{TekniskStobi} og derfor er der beregnet på en profil, som har en lavere godstykkelse på 6,0. Dimensionen for profilen er 150 $\cdot$ 100 $\cdot $ 6.
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{\begin{tabular}{|c|l|c|c|c|c|}
+\hline
+\multicolumn{6}{|c|}{\textbf{Tryk}}                                \\ \hline
+\textbf{Gitterkonstruktion} & \textbf{Profiltype} &\textbf{ Udbøjningsakse} & $N_{Ed}$ [MPa] & $\leq$ & $N_{b,Rd}$ [MPa] \\ \hline
+     Vertikalt               &     IPE 360, S235        &      y           & 97,64    & $\leq$ & 174,29  \\ \hline
+     Vertikalt               &        HEB 300, S355     &        y         & 58,37  & $\leq$  & 266,23   \\ \hline
+            Horisontalt       &      IPE 200, S235       &          z       & 19,58  & $\leq$ & 181,34     \\ \hline
+           Horisontalt        &         RHS 150 $\cdot$ 100$ \cdot$ 6,0, S355    &            z     & 69,15 &$\leq$  & 91,12   \\ \hline
+\end{tabular}}
+\caption{Tabel over resultatet over trykstænger i det vertikale og horisontale gitter.}
+\label{tab:Resultryk}
+\end{table}
+
+For de resterede trækstænger anvendes den samme beregningsmodel som HEB 300, S355. I Tabel \ref{tab:ResulTrak} kan man se resultatet af eftervisningen af bæreevnen, af alle trækstænger i det vertikale og horisontale gitter.
+\begin{table}[H]
+\centering
+
+\begin{tabular}{|c|l|c|c|c|} 
+\hline
+\multicolumn{5}{|c|}{\textbf{Træk}}                                                   \\ \hline
+\textbf{Gitterkonstruktion} & \textbf{Profiltype}            & $N_{Ed}$ {[}MPa{]} & $\leq$ & $N_{pl,Rd}$ {[}MPa{]} \\ \hline
+Vertikalt          & HEB 300, S355         & 58,29           &$\leq$  & 322,73     \\ \hline
+Vertikalt          & Ø65, S355            & 224,88          &$\leq$  & 304,55   \\ \hline
+Horisontalt        & RHS 150$ \cdot$ 100$\cdot $6, S355 & 69,10          & $\leq$ & 322,73     \\ \hline
+\end{tabular}
+\caption{Tabel over resultatet over trækstænger i det vertikale og horisontale gitter.}
+\label{tab:ResulTrak}
+\end{table}
+
+
