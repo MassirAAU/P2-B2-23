@@ -1,0 +1,203 @@
+\chapter{Laster}
+I det følgende afsnit vil de laster der påvirker tilbygningen til Strøybergs Palæ. Lasterne der påvirker konstruktionen er nytte-, egen-, vind- og snelast. Lasterne skal være kendt, før bygningen og fundamentet kan dimensioneres.
+
+%\section{Egenlast}
+
+
+\section{Nyttelast}
+Nyttelast er en last der ikke virker permanent på en bygning, men derimod er varierende og kommer af anvendelse af en bygning. Nyttelast er den last som mennesker og inventar påvirker en konstruktion med. Nyttelast dækker over to laster, den transiente del (laster der varer over en til tre dage) og den vedvarende del (laster der varer over fem til ti år).
+
+Nyttelast regnes på to forskellige måder, en jævnt fordelt fladelast $ q_{k} $ målt i $ \SI{}{kN/m^2} $ og en punktlast $ Q_{k} $, målt i kN. Disse to nyttelaster kan ikke optræde samtidigt. Fladelasten bruges til en global eftervisning af bæreevne og punktlasten bruges til en lokaleftervisning af bæreevne.
+
+
+Nyttelasten, der virker på tilbygningen, er ens på alle etager. Bygningen er beregnet til boliger og går derfor ind under kategori A, som beskrevet i den tilhørende Eurocode. I kategori A regnes der med en anbefalet karakteristisk jævnt fordelt nyttelast på $\SI{2}{kN/m^2}$ og en punktlast på $\SI{2}{kN/m^2}$
+
+
+
+\section{Vindlast}
+Vindlast er den last som vind påvirker bygninger med og virker vinkelret på bygningers overflader. 
+
+NOTE: evt. figur der viser hvordan vind virker på en konstruktion:
+
+Følgende afsnit er beregnet ud fra Eurocode DS/EN-1991-1-4. Værdierne for diverse konstanter og variable er aflæst i det tilhørende danske nationale anneks.
+
+I de følgende afsnit bliver basisvindhastigheden, ruhedesfaktoren, middelvindhastigheden, turbolensintensiteten, peakhastighedstrykket og vindtrykket på tilbygningen beregnet.
+
+
+\subsection{Basisvindhastighed}
+Basisvindhastigheden er afhængig af retningsfaktoren, årstidsfaktoren og grundværdien for basisvindhastigheden.
+
+Følgende formel bruges til at beregne basisvindhastigheden:
+\begin{align*}
+v_{b} = c_{dir} \cdot c_{season} \cdot v_{b,0}
+\end{align*}
+
+Hvor:
+\begin{itemize}
+\item $v_{b}$ = basisvindhastigheden.
+\item $v_{b,0}$ = grundværdien for basisvindhastigheden.
+\item $ c_{season} $ = årstidsfaktoren.
+\item $ c_{dir} $ = retningsfaktoren.
+\end{itemize}
+I dette tilfælde er $ v_{b,0} $ $ \SI{24}{m/s} $, $ c_{season} $ er 1,0, da bygningen står året rundt og $ c_{dir} $ sættes til 1,0, da dette er den anbefalede værdi.
+
+\begin{align*}
+v_{b} = 1,0 \cdot 1,0 \cdot \SI{24}{m/s}
+\end{align*}
+
+Dvs. basisvindhastigheden ved tilbygningen til Strøybergs Palæ er $ \SI{24}{m/s} $.
+
+\subsection{Ruhedsfaktor}
+Ruhedsfaktoren er afhængig af ruhedslængden, terrænfaktoren og bygningens højde over terræn.
+
+Følgende formler bruges til at beregne ruhedsfaktoren
+\begin{align*}
+c_{r}(z) = k_{r} \cdot ln\left(\frac{z}{z_{0}}\right)
+\end{align*}
+\begin{align*}
+k_{r} = 0,19 \cdot ln\left(\frac{z_{0}}{z_{0,II}}\right)^{0,07}
+\end{align*}
+
+Hvor:
+\begin{itemize}
+\item $ c_{r}(z) $ = ruhedsfaktoren i højden z.
+\item $ k_{r} $ = terrænfaktoren.
+\item z = bygningens højde over terræn.
+\item $ z_{0} $ = ruhedslængden.
+\item $ z_{0,II} $ =0,05m, som aflæst i Tabel XX
+\end{itemize}
+
+I dette tilfælde er z = 14.85 m, $ z_{0} $ er 0,3 m, grundet terrænkategori III er valgt.
+
+
+Terrænfaktoren beregnes:
+\begin{align*}
+k_{r} = 0,19 \cdot ln\left(\frac{\SI{0,3}{m}}{\SI{0,05}{m}}\right)^{0,07} = 0,22
+\end{align*}
+
+Ruhedsfaktoren beregnes:
+\begin{align*}
+c_{r}(z) = 0,22 \cdot ln\left(\frac{\SI{14.85}{m}}{\SI{0,3}{m}}\right) = 0,86
+\end{align*}
+
+Dvs. ruhedsfaktoren i højden z ved tilbygningen ved Strøybergs Palæ er 0,86.
+
+
+\subsection{Middelvindhastighed}
+Middelvinhastigheden er afhængig af orografifaktoren, ruhedsfaktoren og basisvindhastigheden.
+
+Følgende formel bruges til at beregne middelvindhastigheden:
+\begin{align*}
+v_{m}(z) =c_{r}(z) \cdot c_{0}(z) \cdot v_{b}
+\end{align*}
+
+Hvor:
+\begin{itemize}
+\item $ v_{m}(z) $ = middelvindhastighed i højden z.
+\item $ c_{r}(z) $ = ruhedsfaktoren i højden z.
+\item $ c_{0}(z) $ = orografifaktoren i højden z.
+\item $ v_{b} $ = basisvindhastigheden.
+\end{itemize}
+
+I dette tilfælde er $ c_{r}(z) $ = 0,86, $ c_{0}(z) $ er =1,0, da den gennemsnitslige hældning af terrænet til luv er mindre end tre grader. $ v_{b} $ er =24 m/s.
+
+\begin{align*}
+v_{m}(z) = 0,86 \cdot 1,0 \cdot \SI{24}{m/s} = \SI{20.64}{m/s}
+\end{align*}
+
+Dvs. middelvindhastigheden ved tilbygningen til Strøybergs Palæ i højden z, er 20,64 m/s.
+
+
+
+\subsection{Turbolensintensitet}
+Turbolensintensiteten er afhængig af bygningens højde over terræn, ruhedslængden, turbolensfaktoren og orografifaktoren.
+
+Følgende formel bruges til at beregne turbolensintensiteten:
+\begin{align*}
+I_{v}(z) = \frac{k_{l}}{c_{0}(z) \cdot ln\left(\frac{z}{z_{0}}\right)}
+\end{align*}
+
+Hvor:
+\begin{itemize}
+\item $ I_{v}(z) $ = turbolensintensiteten i højden z.
+\item $ k_{l} $ = turbolensfaktor.
+\item $ c_{0} $ = orografifaktor.
+\item $ z_{0} $ = ruhedslængden.
+\end{itemize}
+
+I dette tilfælde er $ k_{l} $ = 1,0, da dette er den anbefalede værdi. $ c_{0} $ = 1,0, da den gennemsnitslige hældning af terrænet er mindre end tre grader. $ z_{0} $ = 0,3 m, da terrænkategori III er valgt.
+
+\begin{align*}
+I_{v}(z) = \frac{1,0}{1,0(z) \cdot ln\left(\frac{\SI{14,85}{m}}{\SI{0,3}{m}}\right)} = 0,26
+\end{align*}
+
+Dvs. turbolensintensiteten ved tilbygningen til Strøybergs Palæ er 0,26.
+
+\subsection{Peakhastighedstryk}
+Peakhastighedstrykket er afhængig af luftens densitet, stødfaktoren, turbolensintensiteten og middelvindhastigheden.
+
+Følgende formel bruges til at beregne peakhastighedstrykket:
+\begin{align*}
+q_{p}(z) = [1 + 7 \cdot I_{v}(z)] \cdot \frac{1}{2} \cdot \rho \cdot (v_{m}(z))^2
+\end{align*}
+
+Hvor:
+\begin{itemize}
+\item $ [1 + 7 \cdot I_{v}(z)] $ = stødfaktor.
+\item $ I_{v}(z) $ = turbolensintensitet.
+\item $ \rho $ = luftens densitet.
+\item $ v_{m}(z) $ = middelvindhastighed.
+\end{itemize}
+
+I dette tilfælde er $ I_{v}(z) $ = 0,26. $ \rho $ = $ \SI{1,25}{kg/m^3} $, da dette er den anbefalede værdi. $ v_{m}(z) $ = 20.64 m/s.
+
+\begin{align*}
+q_{p}(z) = [1 + 7 \cdot 0.26] \cdot \frac{1}{2} \cdot \SI{1,25}{kg/m^3} \cdot (\SI{20,64}{m/s})^2 = \SI{0,748}{kN/m^2}
+\end{align*}
+
+Dvs. peakhastighedstrykket ved tilbygningen til Strøybergs Palæ er $ \SI{0,748}{kN/m^2} $
+
+
+\subsection{Udvendigt vindtryk}
+
+Følgende formel bruges til at beregne det udvendige vindtryk:
+\begin{align*}
+w_{e} = q_{p}(z_{e}) \cdot c_{pe}
+\end{align*}
+
+Hvor:
+\begin{itemize}
+\item $ q_{p}(z_{e}) $ = peakhastighedstryk i højden $ z_{e} $.
+\item $ c_{pe} $ = formfaktor for det udvendige vindtryk.
+\item $ z_{e} $ = højden af bygningen, da bygningen er lavere end den er bred.
+\end{itemize}
+
+Da tilbygningen til Strøybergs Palæ, er lavere end den er bred, er $ q_{p}(z_{e}) $ = $ q_{p}(z) $, som blev beregnet tidligere til:
+\begin{align*}
+q_{p}(z) = \SI{0,748}{kN/m^2}
+\end{align*}
+
+NOTE: indsæt figur med vindretning og sådan.
+
+h/d forholdet bestemmes, dette er vigtigt at kende, da det bruges til at bestemme hvilken formfaktor der skal benyttes:
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\section{Snelast}
