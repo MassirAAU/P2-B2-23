@@ -1,18 +1,28 @@
 \changetocdepth {2}
 \select@language {danish}
-\contentsline {chapter}{\chapternumberline {1}Laster}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Nyttelast}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Vindlast}{1}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Basisvindhastighed}{1}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Ruhedsfaktor}{2}{subsection.1.2.2}
-\contentsline {subsection}{\numberline {1.2.3}Middelvindhastighed}{3}{subsection.1.2.3}
-\contentsline {subsection}{\numberline {1.2.4}Turbolensintensitet}{3}{subsection.1.2.4}
-\contentsline {subsection}{\numberline {1.2.5}Peakhastighedstryk}{4}{subsection.1.2.5}
-\contentsline {subsection}{\numberline {1.2.6}Udvendigt vindtryk}{4}{subsection.1.2.6}
-\contentsline {chapter}{\chapternumberline {2}Snelast}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Formfaktor}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Eksponeringsfaktor}{6}{section.2.2}
-\contentsline {section}{\numberline {2.3}Termisk faktor}{6}{section.2.3}
-\contentsline {section}{\numberline {2.4}Karakteristisk terr\IeC {\ae }nv\IeC {\ae }rdi}{6}{section.2.4}
-\contentsline {section}{\numberline {2.5}Beregning af snelast}{6}{section.2.5}
-\contentsline {section}{\numberline {2.6}Snelast fra sneophobning}{7}{section.2.6}
+\contentsline {chapter}{\chapternumberline {1}Geoteknisk unders\IeC {\o }gelse}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Sigteanalyse}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Simpelt triaxalfors\IeC {\o }g}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}L\IeC {\o }s og fast lejring}{1}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}L\IeC {\o }s lejring}{1}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Fast lejring, $e_{min}$}{2}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Det naturlige poretal}{2}{subsection.1.3.3}
+\contentsline {chapter}{\chapternumberline {2}Laster}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Nyttelast}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Egenlast}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Vindlast}{9}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Basisvindhastighed}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Ruhedsfaktor}{10}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Middelvindhastighed}{10}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Turbolensintensitet}{11}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Peakhastighedstryk}{11}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}Udvendigt vindtryk}{12}{subsection.2.3.6}
+\contentsline {subsubsection}{Vindlast p\IeC {\r a} de vandrette mure}{13}{section*.2}
+\contentsline {subsubsection}{Vindlast p\IeC {\r a} taget}{13}{section*.3}
+\contentsline {section}{\numberline {2.4}Snelast}{14}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Formfaktor}{14}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Eksponeringsfaktor}{14}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Termisk faktor}{15}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Karakteristisk terr\IeC {\ae }nv\IeC {\ae }rdi}{15}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Beregning af snelast}{15}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}Snelast fra sneophobning}{15}{subsection.2.4.6}

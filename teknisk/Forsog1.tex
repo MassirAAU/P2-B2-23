@@ -1,0 +1,119 @@
+\chapter{Forsøg}
+
+BILLEDE:
+
+%\begin{figure}[H] 
+%\centering
+%\includegraphics[width=0.50\textwidth]{billeder/LF1}
+%\caption{Billede tekst.}
+%\label{fig:LF1}
+%\end{figure}
+
+
+Tabeller:
+Latex table generator
+
+division
+$\frac{•}{•}$
+%$\SI{10}{kg/N}$
+
+
+
+\section{Løs og fast lejring}
+
+
+I dette afsnit vil beregninger til løs og fast lejring af jordarter gennemgåes. Forsøget har til formål at finde jordens relative lejringtæthed, som er et tal der vokser fra 0 til 1, når lejringstætheden går fra den løseste til den fasteste lejring.
+
+Der er to typer af udstyr til at udfører forsøget alt efter den maksimale kornstørrelse, hvor en maksimal kornstørrelse under $\SI{5,0}{mm}$, medfører en lille cylinder, og over $\SI{5,0}{mm}$ medfører en stor cylinder. Idet der i sigteanalysen blev fastlagt en maksimal kornstørrelse på ca. $\SI{1}{mm}$,  skal forsøget tage udgangspunkt i en lille cylinder med volumen $\SI{70,0}{cm^{3}}$, og en stamper med faldhøjde på $\SI{30}{cm}$.
+
+Den relative lejringstæthed er bestemt ved:
+
+$I_{D}=\frac{e_{max}-e_{in situ}}{e_{max}-e_{min}}$
+
+Hvor $e_{in situ}$ er jordartens naturlige poretal, $e_{max}$ er den løseste lejring og $e_{min}$ er den fasteste lejring. Poretallet angiver porevolumenets relative størrelse. Disse er blevet bestemt ved standardiserede laboratorieforsøg, som nu vil blive beregnet på. For en forsøgsvejleding henvises der til XXX.
+
+\subsection{Løs lejring, $e_{max}$}
+
+$e_{max}$ er det poretal, som bestemmes ved at lade sand løbe gennem en tragt, og  lejre sig i den pågældende cylinder.
+Efter dette forsøg, kan poretallet bestemmes ved følgende udtryk:
+
+$e=\frac{d_{s}\cdot \rho_{w}\cdot V}{W_{s}}-1$
+
+$d_{s}$ er kornvægtfyldens relative densitet, som i dette forsøg er blevet skønnet til at være 2,65.
+
+V er volumen af materialet, som er målt til $\SI{70,0}{cm^{3}}$
+
+$\rho_{w}$ er vands densitet, $\SI{1}{g/cm^{3}}$
+
+$W_{s}$ er den målte masse af materialet, efter forsøgets udførelse. Forsøget er gentaget 3 gange hvoraf følgende resultater er opnået:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Forsøg & 1     & 2     & 3     & gns.  \\ \hline
+$W_{s}$ (g)    & 99,36 & 98,83 & 99,20 & 99.13 \\ \hline
+\end{tabular}
+\caption{Resultater fra løs lejring}
+\label{my-label}
+\end{table}
+
+Derved kan poretallet for den løseste lejring $e_{max}$ bestemmes til at være:
+
+$e_{max}=\frac{d_{s}\cdot \rho_{w}\cdot V}{W_{s}}-1=\frac{2,65\cdot \SI{1}{g/cm^{3}} \cdot \SI{70}{cm^{3}}}{\SI{99,13}{g}}-1=0.87$
+
+\subsection{Fast lejring, $e_{min}$}
+
+$e_{min}$ er det poretal, som findes ved den lejring, hvor sandet bliver indstampet i en cylinder efter en standerdiseret procedure. 
+
+Poretallet kan findes ved samme udtryk for e, som kan ses i forrige afsnit. Ved dette forsøg er der ligeledes lavet 3 gentagelser, hvorved der er fundet  følgende volumener og masser:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Forsøg                   & 1      & 2      & 3      & gns.   \\ \hline
+Ws (g)                   & 101,26 & 100,61 & 102,47 & 101,45 \\ \hline
+V ($\SI{}{cm^{3}}$) & 61,80  & 61,45  & 62,45  & 61.90  \\ \hline
+\end{tabular}
+\caption{Resultater fra fast lejring}
+\label{my-label}
+\end{table}
+
+Med disse værdier kan den gennemsnitlige fasteste lejring, $e_{min}$, findes som:
+
+$e_{min}=\frac{d_{s}\cdot \rho_{w}\cdot V}{W_{s}}-1=\frac{2,65\cdot \SI{1}{g/cm^{3}} \cdot \SI{61,90}{cm^{3}}}{\SI{101,45}{g}}-1=0.62$
+
+\subsection{Det naturlige poretal, $e_{in situ}$}
+
+Det naturlige poretal er bestemt ved følgende udtryk:
+
+$e_{in situ}=(1+w)\cdot\frac{d_{s}}{\gamma}\cdot \gamma_{w}-1$
+
+w er jordens vandindhold som forholdet mellem vand- og kornmasse. Det antages for dette forsøg at vandindholdet er 0.
+
+$\gamma_{w}$ er vands rumvægt, $\SI{10}{kN/m^{3}}$ 
+
+$\gamma$ er materialets rumvægt. Den oprindelige volumen af den prøve, som er blevet udlejret, samt massen af sand der er brugt, er fundet ud fra triaxalforsøget. Rumvægten er da givet som:
+
+$\gamma=\frac{kraft}{volumen}$.
+
+Hvor kraften af materialet er:
+$(\SI{1844}{g}-\SI{1444}{g})\cdot \SI{9,82}{m/s^{2}}=\SI{3,928}{N}$
+
+(Masserne er henholdvis før og under triaxalforsøget)
+
+Volumen er målt til $\SI{2,599}{10^{5}mm^{3}}$
+
+Vi har altså at:
+
+$\gamma=\frac{kraft}{volumen}=\frac{\SI{3,928}{N}}{\SI{2,599}{10^{5}mm^{3}}}=\SI{1.511}{10^{-5}N/mm^{3}}$
+
+Nu kan det naturlige poretal bestemmes som:
+
+$e_{in situ}=(1+w)\cdot\frac{d_{s}}{\gamma}\cdot \gamma_{w}-1=(1+0)\cdot\frac{2,65}{\SI{1.511}{10^{-5}N/mm^{3}}}\cdot \SI{10}{kN/m^{3}}-1=0,75$
+
+Nu hvor $e_{max}$, $e_{min}$ og $e_{in situ}$ er fundet, kan den relative lejringstæthed, $I_{D}$ beregnes til:
+
+$I_{D}=\frac{e_{max}-e_{in situ}}{e_{max}-e_{min}}=\frac{0,87-0,75}{0,87-0,62}=0,46$
+

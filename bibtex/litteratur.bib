@@ -1,0 +1,185 @@
+%%%% Guide til bibtex og litteratur.bib %%%%
+
+% Alle kilder angives efter Harvard-metoden og vil i rapporten fremstaa med [FORFATTER, AAR] eller mere praecist [EFTERNAVN, AAR].
+
+% Nederst findes eksempler paa kildeangivelser af typerne book, article, manual techreport og misc.
+	% - Book bruges ved helt almindelige boeger
+	% - Article bruges ved artikler og udgivelser
+	% - Manual bruges ved henvisninger fra internettet, idet \url-funktionen findes her
+	% - Techreport kan bruges ved mindre udgivelser, hvor kun titel, forfatter og aar er noedvendig eller tilgaengelig
+	% - Misc kan bruges ved det, der falder udenfor de andre kategorier - interview, forelaesninger, foredrag osv. 
+
+% Hvis der er flere forfattere paa en kilde, SKAL de listes med 'and' imellem dem - ogsaa ved 3 og derover (f.eks. FORFATTER 1 and FORFATTER 2 and FORFATTER 3). Naar kildelisten bygges i rapporten, vil der ved 2 forfattere komme til at staa [EFTERNAVN 1 og EFTERNAVN 2, AAR] og ved 3 forfattere og derover komme til at staa [EFTERNAVN 1 et. al, AAR]. 
+
+% Ved almindelige forfatternavne skal der vaere ét saet tuborg-parenteser ved Author (f.eks. author = {H. C. Andersen}). Ved andre navne (f.eks. virksomheder, hjemmesider, grupper, raad, naevn osv.) skal der vaere 2 saet tuborg-parenteser ved Author (f.eks. author = {{Dansk Standard}}). Begrundelse: Med 2 saet tuborg-parenteser skrives hele parentesen ud som forfatter, [Dansk Standard, AAR]. Alternativt ville der i eksemplet bare komme til at staa [Standard, AAR].
+
+%-----------------------------------------------------%
+
+%%%% EKSEMPLER (book, article, manual, techreport og misc) %%%%
+
+@book{Bygningsmaterialer,
+	title = {Bygningsmaterialer Grundlæggende egenskaber, 1. udgave, 6 opslag},
+	author = {Anders Nielsen Docent},
+	year = {2010},
+	number = {ISBN 13: 978-87-502-0788-7},
+	publisher = {Polyteknisk forlag}
+},
+
+@book{TekniskStobi,
+	title = {Teknisk Ståbi, 23. udgave},
+	author = {Bjarne Chr. Jensen},
+	year = {2015},
+	number = {ISBN: 978-87-571-2844-4},
+	publisher = {Praxis - Nyt Teknisk Forlag}
+},
+
+@manual{Aabkommuneplan,
+	author ={{Aalborgkommune}},
+	title ={Østre Havn, Stuhrs Brygge},
+	address={\url{http://www.aalborgkommuneplan.dk/kommuneplanrammer/midtbyen/oe-gadekvarteret/14h1.aspx}},
+	year ={2009},
+	note ={Downloadet: 07-12-2015}
+},
+
+@manual{virkkmd,
+	author ={{KMD}},
+	title ={Om KMD},
+	address={\url{http://www.kmd.dk/om-kmd/Sider/default.aspx}},
+	year ={2015},
+	note ={Downloadet: 07-12-2015}
+},
+
+@manual{Byggeplads,
+	author ={{Morten Lund}},
+	title ={Gigantisk kontorjus i samspil med fjorden},
+	address={\url{http://www.byggeplads.dk/byggeri/domicil/kmd}},
+	year ={2007},
+	note ={Downloadet: 07-12-2015}
+},
+
+@manual{DSI,
+	author ={{Dansk Stålinstitut}},
+	title ={Genbrug},
+	address={\url{http://www.steelinfo.dk/dsi_genbrug.php}},
+	year ={-},
+	note ={Downloadet: 07-12-2015}
+},
+
+@manual{Muller,
+	author ={{Lemvigh Müller}},
+	title ={Værd at vide om stål},
+	address={\url{http://catalog.lemu.dk/Publikationer/StlogMetal/BogenomStl/?Page=9}},
+	year ={-},
+	note ={Downloadet: 07-12-2015}
+},
+
+@manual{Dansteel,
+	author ={{DanSteel}},
+	title ={Standard EN 10025:2004},
+	address={\url{http://www.dansteel.dk/data/files/EN%2010025_2004_B.pdf}},
+	year ={2004},
+	note ={Downloadet: 07-12-2015}
+},
+
+@manual{virkKMDenergi,
+	author ={{KMD}},
+	title ={Klima og miljø},
+	address={\url{http://www.kmd.dk/CSR/Sider/Klima-og-miljoe.aspx}},
+	year ={2015},
+	note ={Downloadet: 16-12-2015}
+},
+
+@manual{Azo,
+	author ={{Nick Gilbert}},
+	title ={Structural Steel},
+	address={\url{http://www.azom.com/article.aspx?ArticleID=6022}},
+	year ={2014},
+	note ={Downloadet: 16-12-2015}
+},
+
+@manual{Deform,
+	author ={{K P Shah}},
+	title ={Plastic Deformation and Fracture},
+	address={\url{http://practicalmaintenance.net/?p=1135}},
+	year ={2012},
+	note ={Downloadet: 05-12-2015}
+},
+
+@manual{Eurocode,
+	author ={{Dansk Standard}},
+	title ={Gældende eurocodes},
+	address={\url{http://www.eurocodes.dk/da/hvad-er-eurocodes/gaeldende-eurocodes}},
+	year ={-},
+	note ={Downloadet: 02-12-2015}
+},
+
+@manual{Eurocode1,
+	author ={{Erling R. Trudsø}},
+	title ={Hvad er eurocodes?},
+	address={\url{http://www.eurocodes.dk/da/hvad-er-eurocodes}},
+	year ={-},
+	note ={Downloadet: 02-12-2015}
+},
+
+@manual{Eurocodevind,
+	author ={{Dansk Standard}},
+	title ={DS/EN 1991-1-3},
+	address={\url{http://www.eurocodes.dk/da/fortolkninger/eurocode-1#DS/EN 1991-1-3}},
+	year ={2014},
+	note ={Downloadet: 03-12-2015}
+},
+
+@book{Parti,
+	title = {Eurocode 0: Projekteringsgrundlag for bærende konstruktioner, 2. udgave},
+	author = {Dansk Standard},
+	year = {2007},
+	number = {ICS: 91.070.10; 91.080.01},
+	publisher = {Dansk Standard}
+},
+
+@manual{DS1,
+	author ={{Jørgen Hagelund}},
+	title ={Hvorfor laver vi standarder?},
+	address={\url{http://www.ds.dk/da/standardisering/ds-universitetet/hvorfor-laver-vi-standarder}},
+	year ={-},
+	note ={Downloadet: 05-12-2015}
+},
+
+@manual{DS2,
+	author ={{Jørgen Hagelund}},
+	title ={Hvorfor laver vi standarder?},
+	address={\url{http://www.ds.dk/da/standardisering/ds-universitetet/saadan-bliver-en-standard-til}},
+	year ={-},
+	note ={Downloadet: 05-12-2015}
+},
+
+@manual{DS3,
+	author ={{Jørgen Hagelund}},
+	title ={Hvordan arbejder et s-udvalg?},
+	address={\url{http://www.ds.dk/da/standardisering/ds-universitetet/hvordan-arbejder-et-s-udvalg}},
+	year ={-},
+	note ={Downloadet: 05-12-2015}
+},
+
+@manual{Bygningsreglement1,
+	author ={{Dea Lindegaard and Casper Kjerumgaard and Søren Hein Christensen}},
+	title ={Bygningsreglementet},
+	address={\url{https://www.bolius.dk/bygningsreglementet-19380/}},
+	year ={2014},
+	note ={Downloadet: 10-12-2015}
+},
+
+@manual{Bygningsreglement2,
+	author ={{Dansk Byggeri}},
+	title ={Nyt bygningsreglement træder i kraft},
+	address={\url{http://www.danskbyggeri.dk/for+medlemmer/aktuelt+for+medlemmer/alle+aktuelt/nyt+bygningsreglement+2015+(br15)}},
+	year ={2015},
+	note ={Downloadet: 10-12-2015}
+},
+
+@Misc{John,
+	author ={{John Dalsgaard Sørensen}},
+	title ={VMBA_2015_03},
+	year ={2015},
+	note ={Downloadet: 15-10-2015}
+},
