@@ -6,18 +6,18 @@
 \begin{document}												% Starter dokumentet - obligatorisk
 
 
-\input{formalia/forside}
-\cleardoublepage												% Indsaetter tom side, saa naeste kapitel starter paa hoejre side (hvis noedvendigt)
-\input{formalia/titelblad}
-\cleardoublepage
-\input{formalia/forord}
-\cleardoublepage
+%\input{formalia/forside}
+%\cleardoublepage												% Indsaetter tom side, saa naeste kapitel starter paa hoejre side (hvis noedvendigt)
+%\input{formalia/titelblad}
+%\cleardoublepage
+%\input{formalia/forord}
+%\cleardoublepage
 
 %%%% Indholdsfortegnelse (TOC) %%%%
 
 \phantomsection													% Kunstigt afsnit, som hyperlinks kan 'holde fast i'
 \pdfbookmark[0]{Indholdsfortegnelse}{indhold}					% Tildeler en klikbar bookmark til den endelige PDF
-\tableofcontents*												% Indholdsfortegnelsen (kaldet ToC) 
+\tableofcontents*												% Indholdsfortegnelsen (kaldet ToC)
 
 %\addtocontents{toc}{\protect\newpage}							% Fremtvinger sideskift i ToC hvis noedvendig (der hvor koden placeres)
 
@@ -28,14 +28,34 @@
 
 %% Indledende %%												% Opdel evt. i passende afsnit for overblikkets skyld
 
-\input{intro/indledning}
-\input{intro/projektanalyse}
+%\input{intro/indledning}
+%\input{intro/projektanalyse}
+
+%Kontekstuelt%
+
+
+%\input{kontekst/initierendeproblem}
+
+%\input{kontekst/Geologiskhistorieundersoegelse}
+
+%\input{kontekst/Jordbundsundersoegelse}
+
+%\input{kontekst/Byudvikling}
+
+%\input{kontekst/Interessantanalyse}
+
+%\input{kontekst/Delkonklusion}
+
+%\input{kontekst/Problemanalyse}
+
+\input{teknisk/Laster}
+
+\input{teknisk/Snelast}
 
 
 
-
-\input{formalia/konklusion}
 %\input{formalia/konklusion}
+
 
 
 %%%% Kilder %%%%
@@ -43,7 +63,7 @@
 
 \begingroup
 	\raggedright
-	\bibliography{bibtex/litteratur}						% Litteraturlisten inkluderes
+	\bibliography{bibtex/mybib.bib}						% Litteraturlisten inkluderes
 \endgroup
 
 %%%% Fixme-listen %%%%
@@ -79,5 +99,3 @@
 
 
 \end{document}													% Slutter dokumentet - obligatorisk
-
-
